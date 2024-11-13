@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY package.json yarn.lock ./
 
-RUN yarn install && apk add --no-cache bash
+RUN yarn install
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 3000 483
 
 CMD ["yarn", "dev"]
